@@ -1,14 +1,17 @@
 import React from 'react';
-import MainPage from "./components/MainPage";
+import MainPage from "./components/MainPage/MainPage";
 import GlobalStyle from "./components/GlobalStyle/GlobalStyle";
+import TableContextProvider from "./components/context/TableContext";
 
 function App() {
-  return (
-    <div className="App">
-        <GlobalStyle />
-        <MainPage/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <TableContextProvider>
+                <GlobalStyle/>
+                <MainPage/>
+            </TableContextProvider>
+        </div>
+    );
 }
 
 export default App;
